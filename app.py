@@ -3,7 +3,6 @@ import json
 import pandas as pd
 import plotly.graph_objects as go
 
-
 make = ""
 model = ""
 
@@ -124,15 +123,14 @@ def main():
         st.subheader("About")
         df = pd.read_json('filt.json')
         st.table(df)
-       
 
     if choice == "Visualization":
         st.subheader('Dashboard data set')
         data = pd.read_csv('cars_engage_2022.csv')
         c = pd.unique(data['Make'].value_counts(sort=False))
-        st.write(c)
+        # st.write(c)
         a = pd.unique(data['Make'])
-        st.write(a)
+        # st.write(a)
 
         fig = go.Figure(
             go.Pie(
