@@ -125,7 +125,7 @@ def main():
         st.table(df)
 
     if choice == "Visualization":
-        st.subheader('Dashboard data set')
+        st.subheader('Data Visualization')
         data = pd.read_csv('cars_engage_2022.csv')
         c = pd.unique(data['Make'].value_counts(sort=False))
         # st.write(c)
